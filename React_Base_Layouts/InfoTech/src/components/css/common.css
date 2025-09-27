@@ -1,0 +1,184 @@
+/* ============================================================================
+   COMMON STYLES - Shared across all pages
+   ============================================================================ */
+
+/* ---------------- CSS Reset ---------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------- CSS Custom Properties ---------------- */
+:root {
+  --bg: #ffffff;
+  --text: #1a1d21;
+  --muted: #6b7280;
+  --soft: #eef2f6;
+  --border: #e5e7eb;
+  --accent: #e11d48; /* category red */
+  --brand: #0d3b66; /* deep blue header */
+  --brand-ink: #e6f0ff;
+}
+
+/* ---------------- Base Styles ---------------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+a {
+  color: #0f3e8a;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- Layout Utilities ---------------- */
+.container {
+  width: min(1180px, 94vw);
+  margin-inline: auto;
+  flex: 1;
+}
+
+/* ---------------- Header & Navigation ---------------- */
+.topbar {
+  background: var(--brand);
+  color: #fff;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 1px 6px rgba(0, 0, 0, 0.12);
+}
+
+.topbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+.nav__link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Navigation */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+/* ---------------- Footer ---------------- */
+.footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN - Common breakpoints
+   ============================================================================ */
+
+/* Mobile and Small Tablet (768px and down) */
+@media (max-width: 768px) {
+  .topbar__inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    z-index: 50;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    background: var(--brand);
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+    z-index: 40;
+  }
+
+  .nav-mobile a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+  }
+
+  .nav-mobile.show {
+    display: flex;
+  }
+}
+
+/* Small Mobile Devices (480px and down) */
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
