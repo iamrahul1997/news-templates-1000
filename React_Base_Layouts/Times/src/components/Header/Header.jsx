@@ -7,7 +7,7 @@ function Header() {
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="text-2xl font-extrabold hover:text-green-400">
-          routing
+          Times
         </a>
 
         {/* Menu */}
