@@ -1,0 +1,605 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+  scroll-behavior: smooth;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blog-posts-column > div {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.blog-posts-column > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.blog-posts-column > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.blog-posts-column > div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+p {
+  text-align: justify;
+  /* margin-bottom: 1.2em; */
+  font-size: 16px;
+  color: #444;
+}
+
+/* Main layout */
+.main-container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+/* Blog column */
+.blog-posts-column {
+  flex: 2;
+  padding: 20px;
+}
+
+.blog-posts-column h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #9acd32;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.blog-posts-column h1 {
+  font-size: 42px;
+  padding: 10px 0 20px 0;
+  color: #2c3e50;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.blog-posts-column h2 {
+  padding: 25px 0 15px 0;
+  color: #34495e;
+  font-size: 28px;
+  font-weight: 600;
+  border-left: 4px solid #9acd32;
+  padding-left: 15px;
+  margin-left: -15px;
+}
+
+.blog-posts-column img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-posts-column img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.blog-posts-column p {
+  font-size: 17px;
+  /* padding: 15px 0; */
+  /* line-height: 1.7; */
+  color: #555;
+}
+
+.imagePara {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  margin: 30px 0;
+  color: white;
+}
+
+.imgName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  flex: 1 1 300px;
+  /* Responsive width */
+  min-width: 250px;
+}
+
+.imgName img {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  /* Optional: for nicer look */
+}
+
+.name {
+  font-style: italic;
+  color: rgb(103, 102, 102);
+  font-size: 12px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Content section styling */
+.imagePara > div:last-child {
+  flex: 2 1 400px;
+  /* min-width: 0px; */
+}
+
+/* Responsive adjustments for imagePara */
+@media screen and (max-width: 768px) {
+  .imagePara {
+    flex-direction: column;
+    padding: 20px 15px;
+  }
+
+  .imagePara > div:last-child {
+    width: 100%;
+  }
+
+  .imgName img {
+    height: 250px;
+  }
+}
+
+/* Latest articles column */
+.latest-articles-column {
+  flex: 1;
+  padding: 0;
+  position: sticky;
+  top: 40px;
+  height: fit-content;
+}
+
+.sticky-content {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.section-title {
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #9acd32;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ddd);
+}
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article-item {
+  display: flex;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.article-item:hover {
+  padding-left: 5px;
+}
+
+.article-image {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.article-item:hover .article-image img {
+  transform: scale(1.1);
+}
+
+.article-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.article-category {
+  font-size: 11px;
+  font-weight: 700;
+  color: #9acd32;
+  background: rgba(154, 205, 50, 0.1);
+  padding: 3px 8px;
+  border-radius: 10px;
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.article-content h3 {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  color: #2c3e50;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.article-item:hover .article-content h3 {
+  color: #27ae60;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .flex-wrapper {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .blog-posts-column h1 {
+    font-size: 36px;
+  }
+
+  .article-card {
+    width: 45%;
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    background: #fafafa;
+  }
+
+  .flex-wrapper {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .blog-posts-column {
+    width: 100%;
+    padding: 15px;
+    flex: none;
+  }
+
+  .blog-posts-column h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .blog-posts-column h2 {
+    font-size: 24px;
+    padding: 20px 0 10px 0;
+  }
+
+  .blog-posts-column img {
+    height: 250px;
+    margin: 15px 0;
+  }
+
+  .latest-articles-column {
+    width: 100%;
+    padding: 0;
+    flex: none;
+    position: static;
+    top: auto;
+  }
+
+  .sticky-content {
+    position: static;
+    top: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .imagePara {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .newpara {
+    padding: 20px 15px;
+    margin: 20px 0;
+  }
+
+  .articles-container {
+    gap: 15px;
+  }
+
+  .article-card {
+    width: 100%;
+    min-width: auto;
+    margin-bottom: 15px;
+  }
+
+  .article-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flex-wrapper {
+    padding: 10px;
+  }
+
+  .blog-posts-column {
+    padding: 10px;
+  }
+
+  .blog-posts-column h1 {
+    font-size: 24px;
+    padding: 10px 0 15px 0;
+  }
+
+  .blog-posts-column h2 {
+    font-size: 20px;
+    padding: 15px 0 8px 0;
+    padding-left: 12px;
+    margin-left: -12px;
+  }
+
+  .blog-posts-column p {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+
+  .blog-posts-column img {
+    height: 200px;
+  }
+
+  .imagePara {
+    padding: 15px 10px;
+    gap: 15px;
+  }
+
+  .newpara {
+    padding: 15px 10px;
+  }
+
+  .sticky-content {
+    padding: 12px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .article-item {
+    gap: 12px;
+  }
+
+  .article-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .article-content h3 {
+    font-size: 13px;
+  }
+
+  .article-category {
+    font-size: 10px;
+  }
+
+  .article-text h3 {
+    font-size: 16px;
+  }
+
+  .article-text p {
+    font-size: 11px;
+  }
+}
+
+.newpara {
+  font-size: 16px;
+  padding: 30px 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 5px solid #9acd32;
+  margin: 25px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/*RELATED ARTICAL*/
+
+.related-articles-header {
+  width: 100%;
+  text-align: left;
+  padding: 20px 0;
+  position: relative;
+}
+
+.related-articles-header h2 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: black;
+  margin: 0;
+  position: relative;
+  /* Make sure the h2 is a positioning context */
+  display: inline-block;
+  /* Allows the pseudo-elements to be positioned relative to the h2's width */
+}
+
+.related-articles-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  /* Full line width */
+  height: 2px;
+  background-color: #ddd;
+  /* A light gray color for the main part of the line */
+}
+
+.related-articles-header h2::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 25%;
+  height: 3px;
+  background: linear-gradient(90deg, #9acd32, #7ba428);
+  z-index: 1;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 25%;
+  }
+}
+
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.article-card {
+  position: relative;
+  /* width: 30%; */
+  min-width: 250px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.article-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.article-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.article-card:hover img {
+  transform: scale(1.1);
+}
+
+.article-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    transparent 100%
+  );
+  color: white;
+  padding: 25px 15px 15px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.article-card:hover .article-text {
+  background: linear-gradient(
+    to top,
+    rgba(154, 205, 50, 0.9) 0%,
+    rgba(154, 205, 50, 0.7) 50%,
+    transparent 100%
+  );
+}
+
+.article-text p {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 12px;
+  margin: 0;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(154, 205, 50, 0.8);
+  padding: 4px 8px;
+  border-radius: 12px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.article-text h3 {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 18px;
+  margin: 12px 0 0;
+  font-weight: 600;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
