@@ -4,9 +4,9 @@ import path from "path";
 // ==== USER CONFIGURATION ====
 // Change these manually each time
 const inputFolder =
-  "D:/Web_Dev/React_Projects/React_Base_Layouts/CryptoToday/src/website_combinations/combination_101";
+  "D:/Web_Dev/React_Projects/React_Base_Layouts/CryptoToday/src/website_combinations/combination_420";
 const outputFolder =
-  "D:/Web_Dev/React_Projects/React_Base_Layouts/101/src/components";
+  "D:/Web_Dev/React_Projects/React_Base_Layouts/420/src/components";
 // =============================
 
 if (!fs.existsSync(inputFolder)) {

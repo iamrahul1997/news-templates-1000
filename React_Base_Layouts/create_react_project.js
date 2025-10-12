@@ -7,7 +7,7 @@ import path from "path";
 // ===============================
 // CONFIGURATION
 // ===============================
-const projectName = "414"; // 👈 change this name each time you run
+const projectName = "420"; // 👈 change this name each time you run
 const projectPath = path.resolve(projectName);
 
 // ===============================
