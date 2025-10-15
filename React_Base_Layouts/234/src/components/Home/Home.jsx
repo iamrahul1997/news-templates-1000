@@ -7,7 +7,7 @@ import Section_5 from "../Section_5/Section_5";
 
 export default function Home() {
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-white text-gray-900 font-roboto">
       <Section_1 />
       <Section_2 />
       <Section_3 />
