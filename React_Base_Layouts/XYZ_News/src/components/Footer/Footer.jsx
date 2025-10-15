@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white text-center py-4">
+    <footer className="border-t border-gray-200 bg-white text-center py-4 font-poppins">
       <p className="text-sm text-gray-500">
         © {new Date().getFullYear()} NewsSite. All rights reserved.
       </p>

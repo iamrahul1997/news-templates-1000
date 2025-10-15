@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <header className="border-b border-gray-200">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4 font-poppins">
         {/* Brand */}
         <Link to="/" className="text-xl font-bold">
           XYZ News
