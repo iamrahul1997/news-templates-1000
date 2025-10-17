@@ -21,7 +21,7 @@ export default function ArticlePage() {
   if (!article) return <p className="p-6">Article not found</p>;
 
   return (
-    <div className="bg-white text-black font-sans mx-2 my-2">
+    <div className="bg-white text-black font-sans mx-2 my-2 font-poppins">
       {/* Section 1: Hero / Intro */}
       <section className="max-w-6xl mx-auto py-10">
         {/* <img

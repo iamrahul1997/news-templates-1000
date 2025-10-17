@@ -10,7 +10,7 @@ import Section_7 from "../Section_7/Section_7";
 function Home() {
   return (
     <>
-      <div className="max-w-7xl mx-auto px-4 lg:px-6 py-10">
+      <div className="max-w-7xl mx-auto px-4 lg:px-6 py-10 font-poppins">
         <Section_1 />
         <Section_2 />
         <Section_3 />

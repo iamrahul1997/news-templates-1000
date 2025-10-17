@@ -3,7 +3,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="bg-green-800 text-green-100 sticky top-0 z-50">
+    <header className="bg-green-800 text-green-100 sticky top-0 z-50 font-poppins">
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="text-2xl font-extrabold hover:text-green-400">

@@ -33,7 +33,7 @@ export default function Article() {
   };
 
   return (
-    <main className="main-content">
+    <main className="main-content font-roboto">
       <div className="container">
         <section className="article-page-section">
           <div className="article-page-grid">

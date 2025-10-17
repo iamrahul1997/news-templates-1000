@@ -11,7 +11,7 @@ export default function MainHeader() {
   return (
     <>
       {/* Main Header */}
-      <header role="banner">
+      <header role="banner font-inter">
         <div className="main-header">
           <div className="header-content">
             <div className="logo">
@@ -33,7 +33,7 @@ export default function MainHeader() {
       </header>
 
       {/* Navigation */}
-      <nav role="navigation" aria-label="Main navigation">
+      <nav role="navigation" aria-label="Main navigation font-inter">
         <div className="nav-menu">
           <div className="nav-content">
             <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>

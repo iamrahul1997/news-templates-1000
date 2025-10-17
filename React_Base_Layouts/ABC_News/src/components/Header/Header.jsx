@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-green-900 shadow-md backdrop-blur-sm sticky top-0 z-50">
-      <nav className="container mx-auto px-6 lg:px-12 flex items-center justify-between py-3 font-bold text-lg relative">
+      <nav className="container mx-auto px-6 lg:px-12 flex items-center justify-between py-3 font-bold text-lg relative font-poppins">
         {/* Logo */}
         <Link
           to="/"

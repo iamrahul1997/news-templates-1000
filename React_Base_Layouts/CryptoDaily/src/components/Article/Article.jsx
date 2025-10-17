@@ -31,7 +31,7 @@ export default function ArticlePage() {
     });
 
   return (
-    <main className="article-container">
+    <main className="article-container font-lora">
       <article className="article-content">
         <header className="article-header">
           <h1 className="article-title">{article.title}</h1>

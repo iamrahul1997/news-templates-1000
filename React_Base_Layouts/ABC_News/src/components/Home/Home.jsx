@@ -7,7 +7,7 @@ import Section_5 from "../Section_5/Section_5";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-br from-gray-100 to-gray-200">
+    <div className="bg-gradient-to-br from-gray-100 to-gray-200 font-poppins">
       <Section_1 />
       <Section_2 />
       <Section_3 />

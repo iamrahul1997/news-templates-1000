@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header>
-      <div className="container">
+      <div className="container font-lora">
         <nav>
           <div className="logo">CryptoDaily</div>
           <ul className={`nav-menu ${menuOpen ? "active" : ""}`} id="navMenu">

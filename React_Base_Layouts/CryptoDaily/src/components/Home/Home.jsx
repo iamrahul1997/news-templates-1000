@@ -12,7 +12,7 @@ import "../css/common.css";
 
 export default function Home() {
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-white text-gray-900 font-lora">
       <Section_1 />
       <Section_2 />
       <Section_3 />

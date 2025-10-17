@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <header>
-      <nav className="navbar">
+      <nav className="navbar font-roboto">
         <div className="nav-container">
           <div className="logo">
             <h2>

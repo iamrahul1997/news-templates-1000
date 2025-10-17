@@ -10,7 +10,7 @@ import "../css/common.css";
 
 export default function Home() {
   return (
-    <main className="main-content">
+    <main className="main-content font-roboto">
       <div className="container">
         <Section_1 />
         <Section_2 />
