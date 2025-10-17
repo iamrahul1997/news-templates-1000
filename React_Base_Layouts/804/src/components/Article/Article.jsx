@@ -27,7 +27,7 @@ export default function Article() {
   const moreArticles = allPosts.filter((p) => p.slug !== slug).slice(40, 44);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 lg: gap-8 items-stretch">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 lg: gap-8 items-stretch font-inter">
       <section className="bg-white">
         <div className="flex flex-col lg:flex-row w-full min-h-screen">
           {/* Left Scrollable Column */}
